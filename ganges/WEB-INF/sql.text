@@ -1,0 +1,43 @@
+create table shop(mapPoint double,x int(11),y int(11),shopId text,imagePath
+text);
+create table item(
+	shopId varchar(50),
+	itemId varchar(50),
+	name text,
+	imagePath text,
+	price int,
+	primary key (itemId),
+	FOREIGN KEY (shopId) REFERENCES shop(shopId)
+);
+
+insert into item(
+	shopId,itemId,name,imagePath,price
+)values(
+	'shop01',
+	'item01',
+	'SampleItem1',
+	'item01_0.jpg',
+	100
+);
+insert into item(
+	shopId,itemId,name,imagePath,price
+)values(
+	'shop01',
+	'item02',
+	'SampleItem2',
+	'item02_0.jpg',
+	200
+);insert into item(
+	shopId,itemId,name,imagePath,price
+)values(
+	'shop01',
+	'item03',
+	'SampleItem3',
+	'item03_0.jpg',
+	2000
+);
+
+
+
+
+
